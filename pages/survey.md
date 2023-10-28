@@ -13,6 +13,7 @@ permalink: "/survey/"
         <form action="submit_demographics.php" method="post">
             <label for="age">Age:</label>
             <input type="text" name="age" id="age" required><br>
+
             <label for="gender">Gender:</label>
             <select name="gender" id="gender" required>
                 <option value="male">Male</option>
@@ -20,11 +21,13 @@ permalink: "/survey/"
                 <option value="non-binary">Non-binary</option>
                 <option value="other">Other</option>
             </select><br>
+
             <label for="education">Highest Education Level:</label>
             <input type="text" name="education" id="education" required><br>
+
             <!-- Add more form fields here -->
+
             <input type="submit" value="Submit">
-            <input type="submit" value="Submit and Go to Next Page">
         </form>
     </div>
 </body>
