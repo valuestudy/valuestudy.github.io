@@ -9,7 +9,7 @@ permalink: "/survey/"
 </head>
 <body>
     <div class="container">
-            Please answer the following questions. 
+        <h1>Participant Demographic Survey</h1>
         <form action="submit_demographics.php" method="post">
             <label for="age">Age:</label>
             <input type="text" name="age" id="age" required><br>
