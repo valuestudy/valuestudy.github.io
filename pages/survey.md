@@ -30,11 +30,11 @@ permalink: "/survey/"
             margin: 10px 0;
         }
         label {
-            width: 45%; /* Adjust the width as needed */
+            width: 100%; /* Adjust the width as needed */
             text-align: left;
         }
         input, select {
-            width: 50%; /* Adjust the width as needed */
+            width: 100%; /* Adjust the width as needed */
         }
         input[type="submit"] {
             background-color: #007BFF;
