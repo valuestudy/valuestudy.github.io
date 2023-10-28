@@ -6,6 +6,40 @@ background: '/img/bg-index.jpg'
 
 <!-- Home Intro
 ================================================== -->
+
+
+<body>
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" class="cookie-banner">
+        <p>This website uses cookies to ensure you get the best experience on our website.</p>
+        <button id="accept-cookie" class="cookie-button">Accept</button>
+    </div>
+    
+    <!-- Rest of your webpage content -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          var cookieBanner = document.getElementById("cookie-banner");
+          var acceptCookieButton = document.getElementById("accept-cookie");
+  
+          // Check if the user has accepted cookies before
+          if (localStorage.getItem("cookieAccepted") !== "true") {
+              cookieBanner.style.display = "block"; // Display the banner if not accepted
+  
+              // Handle the "Accept" button click
+              acceptCookieButton.addEventListener("click", function () {
+                  cookieBanner.style.display = "none"; // Hide the banner
+                  localStorage.setItem("cookieAccepted", "true"); // Store user's choice
+              });
+          }
+      });
+  </script>
+  
+  
+</body>
+
+
+
 {% if page.url == "/" %} 
 <div class="rounded mb-5 hero">
   <div class="row align-items-center justify-content-between">
