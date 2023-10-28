@@ -5,11 +5,8 @@ permalink: "/survey/"
 ---
 
 
-<head>
-    <title>Participant Demographics</title>
-</head>
 <body>
-    <h1 style="text-align: center;">Participant Demographic Survey</h1>
+    We kindly request that you answer the survey questions with honesty and candor. Your genuine responses are essential for the success and accuracy of our research. Your anonymity and privacy will be respected throughout the process.
     <form action="submit_demographics.php" method="post" style="max-width: 400px; margin: 0 auto; text-align: left;">
         <div style="margin: 10px 0;">
             <label for="age" style="display: block; margin-bottom: 5px;">Age:</label>
