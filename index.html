@@ -9,33 +9,41 @@ background: '/img/bg-index.jpg'
 
 
 <body>
-    <!-- Cookie Banner -->
-    <div id="cookie-banner" class="cookie-banner">
-        <p>This website uses cookies to ensure you get the best experience on our website.</p>
-        <button id="accept-cookie" class="cookie-button">Accept</button>
-    </div>
-    
-    <!-- Rest of your webpage content -->
+  <!-- Cookie Banner -->
+  <div id="cookie-banner" class="cookie-banner">
+      <p>This website uses cookies to ensure you get the best experience on our website.</p>
+      <button id="accept-cookie" class="cookie-button accept-button">Accept</button>
+      <button id="decline-cookie" class="cookie-button decline-button">Decline</button>
+  </div>
 
-    <script>
+  <!-- Rest of your webpage content -->
+
+  <script>
       document.addEventListener("DOMContentLoaded", function () {
           var cookieBanner = document.getElementById("cookie-banner");
           var acceptCookieButton = document.getElementById("accept-cookie");
-  
-          // Check if the user has accepted cookies before
-          if (localStorage.getItem("cookieAccepted") !== "true") {
-              cookieBanner.style.display = "block"; // Display the banner if not accepted
-  
-              // Handle the "Accept" button click
-              acceptCookieButton.addEventListener("click", function () {
-                  cookieBanner.style.display = "none"; // Hide the banner
-                  localStorage.setItem("cookieAccepted", "true"); // Store user's choice
-              });
+          var declineCookieButton = document.getElementById("decline-cookie");
+
+          // Check if the user has accepted or declined cookies before
+          if (localStorage.getItem("cookieAccepted") === "true") {
+              cookieBanner.style.display = "none"; // Hide the banner if accepted
+          } else if (localStorage.getItem("cookieDeclined") === "true") {
+              cookieBanner.style.display = "none"; // Hide the banner if declined
           }
+
+          // Handle the "Accept" button click
+          acceptCookieButton.addEventListener("click", function () {
+              cookieBanner.style.display = "none"; // Hide the banner
+              localStorage.setItem("cookieAccepted", "true"); // Store user's acceptance
+          });
+
+          // Handle the "Decline" button click
+          declineCookieButton.addEventListener("click", function () {
+              cookieBanner.style.display = "none"; // Hide the banner
+              localStorage.setItem("cookieDeclined", "true"); // Store user's decline
+          });
       });
   </script>
-  
-  
 </body>
 
 

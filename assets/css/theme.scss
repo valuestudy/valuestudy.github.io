@@ -634,3 +634,15 @@ span.navigation:before {
     padding: 5px 15px;
     cursor: pointer;
 }
+
+.accept-button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+}
+
+.decline-button {
+    background-color: #FF5733; /* Red */
+    border: none;
+    color: white;
+}
