@@ -9,7 +9,9 @@ image: assets/images/screenshot.png
 <head>
     <title>Participant Demographics</title>
 </head>
+
 <body>
+<div class="container">
     <h1>Participant Demographic Survey</h1>
     <form action="submit_demographics.php" method="post">
         <label for="age">1. Age:</label>
@@ -55,5 +57,6 @@ image: assets/images/screenshot.png
 
         <input type="submit" value="Submit">
     </form>
+</div>
 </body>
 </html>
