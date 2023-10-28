@@ -1,8 +1,7 @@
 ---
 layout: page
-title: About
+title: Survey
 permalink: "/about/"
-image: assets/images/screenshot.png
 ---
 
 <html>
