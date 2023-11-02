@@ -26,11 +26,13 @@ permalink: "/survey/success.html/"
 
   <script>
   function onSignIn(googleUser) {
+    print('hallo')
       // This function will be called when a user successfully signs in with Google.
-      var profile = googleUser.getBasicProfile();
-      console.log('ID: ' + profile.getId());
-      console.log('Name: ' + profile.getName());
-      console.log('Email: ' + profile.getEmail());
+    var profile = googleUser.getBasicProfile();
+    console.log('ID: ' + profile.getId());
+    console.log('Name: ' + profile.getName());
+    console.log('Email: ' + profile.getEmail());
+    
   
       // You can save the user's login state in your website's database or storage.
       // For security, validate the user on your server before granting access.
