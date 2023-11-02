@@ -22,26 +22,26 @@ permalink: "/survey/success.html/"
 
 
 
-
-
-
-<script>
-function onSignIn(googleUser) {
-    // This function will be called when a user successfully signs in with Google.
-    var profile = googleUser.getBasicProfile();
-    console.log('ID: ' + profile.getId());
-    console.log('Name: ' + profile.getName());
-    console.log('Email: ' + profile.getEmail());
-
-    // You can send the user information to your server for authentication if needed.
-    // For security, validate the user on your server before granting access.
-
-    // You can also sign the user out when they click a "Sign Out" button.
-    // gapi.auth2.getAuthInstance().signOut();
-}
-</script>
-
-<!-- Include the Google Sign-In library -->
-<script src="https://apis.google.com/js/platform.js" async defer></script>
-
+  <script>
+  function onSignIn(googleUser) {
+      // This function will be called when a user successfully signs in with Google.
+      var profile = googleUser.getBasicProfile();
+      console.log('ID: ' + profile.getId());
+      console.log('Name: ' + profile.getName());
+      console.log('Email: ' + profile.getEmail());
+  
+      // You can save the user's login state in your website's database or storage.
+      // For security, validate the user on your server before granting access.
+      // Ensure secure handling of user data.
+  
+      // You can also sign the user out when they click a "Sign Out" button.
+      // gapi.auth2.getAuthInstance().signOut();
+  }
+  </script>
+  
+  <!-- Include the Google Sign-In library -->
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  
+  </body>
+  </html>
 
