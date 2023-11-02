@@ -13,7 +13,9 @@ permalink: "/survey/success.html/"
         <p class="lead mb-4">In order to gain additional payment, consider sharing your social media account</p>
 
 
-        <a href="{{site.baseurl}}/survey" class="btn btn-dark text-white px-5 btn-lg">Click here</a>
+        <a href="{{site.baseurl}}/survey" class="btn btn-dark text-white px-5 btn-lg">
+          <!-- Add the Google Sign-In button -->
+          <div class="g-signin2" data-onsuccess="onSignIn"></div></a>
       </div>
     </div>
   </div>
@@ -21,8 +23,7 @@ permalink: "/survey/success.html/"
 
 
 
-<!-- Add the Google Sign-In button -->
-<div class="g-signin2" data-onsuccess="onSignIn"></div>
+
 
 <script>
 function onSignIn(googleUser) {
