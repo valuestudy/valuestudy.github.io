@@ -21,7 +21,7 @@ permalink: "/about/"
 <body>
 
 <!-- Add the Sign-In button -->
-<button id="google-signin-button">Sign in with Google</button>
+<button onclick="google-signin-button" data-clientid="1092513324979-i2efio0recer8vjfjsim86eva7pi7919.apps.googleusercontent.com">Sign in with Google</button>
 
 <script>
 // Initialize the Google Sign-In API
