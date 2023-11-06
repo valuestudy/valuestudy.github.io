@@ -23,7 +23,7 @@ permalink: "/about/"
 <body>
 
 <!-- Add the Sign-In button -->
-<button id="google-signin-button">Sign in with Google</button>
+<button type="button" id="google-signin-button">Sign in with Google</button>
 
 <script>
 // Initialize the Google Sign-In API
