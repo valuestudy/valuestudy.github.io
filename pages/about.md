@@ -16,8 +16,6 @@ permalink: "/about/"
 
 <head>
     <title>Google Sign-In Example</title>
-    
-    <!-- Include the Google Sign-In library -->
     <script src="https://apis.google.com/js/platform.js" async defer></script>
 </head>
 <body>
