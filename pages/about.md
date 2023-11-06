@@ -23,13 +23,13 @@ permalink: "/about/"
 <body>
 
 <!-- Add the Sign-In button -->
-<button onclick="signInWithGoogle()">Sign in with Google</button>
+<button id="google-signin-button">Sign in with Google</button>
 
 <script>
 // Initialize the Google Sign-In API
 gapi.load('auth2', function() {
     gapi.auth2.init({
-        client_id: '1092513324979-i2efio0recer8vjfjsim86eva7pi7919.apps.googleusercontent.com' // Replace with your actual Client ID
+        client_id: '1092513324979-i2efio0recer8vjfjsim86eva7pi7919.apps.googleusercontent.com' // Your Client ID
     });
 });
 
@@ -41,6 +41,10 @@ function signInWithGoogle() {
         // You can access user information via googleUser.getBasicProfile() and take further actions.
     });
 }
+
+// Attach the signInWithGoogle function to the button's click event
+document.getElementById('google-signin-button').addEventListener('click', signInWithGoogle);
 </script>
 
 </body>
+
