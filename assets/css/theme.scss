@@ -635,25 +635,25 @@ span.navigation:before {
     cursor: pointer;
 }
 
-.accept-button-green {
+.accept-button.green {
     background-color: #4CAF50; /* Green */
     border: none;
     color: white;
 }
 
-.decline-button-red {
+.decline-button.red {
     background-color: #FF5733; /* Red */
     border: none;
     color: white;
 }
 
-.accept-button-grey {
+.accept-button.grey {
     background-color: #808080; /* Green */
     border: none;
     color: white;
 }
 
-.decline-button-grey {
+.decline-button.grey {
     background-color: #808080; /* Red */
     border: none;
     color: white;
