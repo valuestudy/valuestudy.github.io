@@ -8,50 +8,65 @@ background: '/img/bg-index.jpg'
 ================================================== -->
 
 
-<body>
-  <!-- Cookie Banner -->
-  <div id="cookie-banner" class="cookie-banner">
-      <p>This website uses cookies to ensure you get the best experience on our website.</p>
-      <button id="accept-cookie-green" class="cookie-button accept-button">Accept</button>
-      <button id="decline-cookie-red" class="cookie-button decline-button">Decline</button>
-  </div>
+Certainly! Below is an example of two cookie banners with different designs. The script will randomly select one of the banners to display when the page loads:
 
-    <!-- Cookie Banner -->
-    <div id="cookie-banner2" class="cookie-banner2">
-      <p>This website uses cookies to ensure you get the best experience on our website.</p>
-      <button id="accept-cookie-grey" class="cookie-button accept-button">Accept</button>
-      <button id="decline-cookie-grey" class="cookie-button decline-button">Decline</button>
-  </div>
+html
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
 
+    <!-- Cookie Banner 1 -->
+    <div id="cookie-banner-1">
+        <p>This website uses cookies to ensure you get the best experience on our website.</p>
+        <button id="accept-button-green" class="cookie-button accept-button">Accept</button>
+        <button id="decline-button-red" class="cookie-button decline-button">Decline</button>
+    </div>
 
-  <!-- Rest of your webpage content -->
+    <!-- Cookie Banner 2 -->
+    <div id="cookie-banner-2">
+        <p>We use cookies for analytics and to improve your experience. Click "Accept" to consent.</p>
+        <button id="accept-button-grey" class="cookie-button accept-button">Accept</button>
+        <button id="decline-button-grey" class="cookie-button decline-button">Decline</button>
+    </div>
 
-  <script>
-      document.addEventListener("DOMContentLoaded", function () {
-          var cookieBanner = document.getElementById("cookie-banner");
-          var acceptCookieButton = document.getElementById("accept-cookie");
-          var declineCookieButton = document.getElementById("decline-cookie");
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Array of cookie banners
+            var cookieBanners = document.querySelectorAll("#cookie-banner-1, #cookie-banner-2");
 
-          // Check if the user has accepted or declined cookies before
-          if (localStorage.getItem("cookieAccepted") === "true") {
-              cookieBanner.style.display = "none"; // Hide the banner if accepted
-          } else if (localStorage.getItem("cookieDeclined") === "true") {
-              cookieBanner.style.display = "none"; // Hide the banner if declined
-          }
+            // Randomly select a banner to display
+            var randomBannerIndex = Math.floor(Math.random() * cookieBanners.length);
+            var currentCookieBanner = cookieBanners[randomBannerIndex];
 
-          // Handle the "Accept" button click
-          acceptCookieButton.addEventListener("click", function () {
-              cookieBanner.style.display = "none"; // Hide the banner
-              localStorage.setItem("cookieAccepted", "true"); // Store user's acceptance
-          });
+            var acceptCookieButton = currentCookieBanner.querySelector(".accept-button");
+            var declineCookieButton = currentCookieBanner.querySelector(".decline-button");
 
-          // Handle the "Decline" button click
-          declineCookieButton.addEventListener("click", function () {
-              cookieBanner.style.display = "none"; // Hide the banner
-              localStorage.setItem("cookieDeclined", "true"); // Store user's decline
-          });
-      });
-  </script>
+            // Check if the user has accepted or declined cookies before
+            if (localStorage.getItem("cookieAccepted") === "true") {
+                currentCookieBanner.style.display = "none"; // Hide the banner if accepted
+            } else if (localStorage.getItem("cookieDeclined") === "true") {
+                currentCookieBanner.style.display = "none"; // Hide the banner if declined
+            } else {
+                currentCookieBanner.style.display = "block"; // Show the randomly selected banner
+            }
+
+            // Handle the "Accept" button click
+            acceptCookieButton.addEventListener("click", function () {
+                currentCookieBanner.style.display = "none"; // Hide the banner
+                localStorage.setItem("cookieAccepted", "true"); // Store user's acceptance
+            });
+
+            // Handle the "Decline" button click
+            declineCookieButton.addEventListener("click", function () {
+                currentCookieBanner.style.display = "none"; // Hide the banner
+                localStorage.setItem("cookieDeclined", "true"); // Store user's decline
+            });
+        });
+    </script>
 </body>
 
 
