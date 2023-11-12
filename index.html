@@ -7,52 +7,54 @@ background: '/img/bg-index.jpg'
 <!-- Home Intro
 ================================================== -->
 
+
 <body>
   <!-- Cookie Banner -->
   <div id="cookie-banner" class="cookie-banner">
-    <p>This website uses cookies to ensure you get the best experience on our website.</p>
-    <button id="accept-cookie-green" class="cookie-button accept-button">Accept</button>
-    <button id="decline-cookie-red" class="cookie-button decline-button">Decline</button>
-</div>
+      <p>This website uses cookies to ensure you get the best experience on our website.</p>
+      <button id="accept-cookie" class="cookie-button accept-button">Accept</button>
+      <button id="decline-cookie" class="cookie-button decline-button">Decline</button>
+  </div>
 
-<!-- Rest of your webpage content -->
+  <!-- Rest of your webpage content -->
 
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        var cookieBanner = document.getElementById("cookie-banner");
-        var acceptCookieButton = document.getElementById("accept-cookie");
-        var declineCookieButton = document.getElementById("decline-cookie");
+  <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          var cookieBanner = document.getElementById("cookie-banner");
+          var acceptCookieButton = document.getElementById("accept-cookie");
+          var declineCookieButton = document.getElementById("decline-cookie");
 
-        // Check if the user has accepted or declined cookies before
-        if (localStorage.getItem("cookieAccepted") === "true") {
-            cookieBanner.style.display = "none"; // Hide the banner if accepted
-        } else if (localStorage.getItem("cookieDeclined") === "true") {
-            cookieBanner.style.display = "none"; // Hide the banner if declined
-        }
+          // Check if the user has accepted or declined cookies before
+          if (localStorage.getItem("cookieAccepted") === "true") {
+              cookieBanner.style.display = "none"; // Hide the banner if accepted
+          } else if (localStorage.getItem("cookieDeclined") === "true") {
+              cookieBanner.style.display = "none"; // Hide the banner if declined
+          }
 
-        // Handle the "Accept" button click
-        acceptCookieButton.addEventListener("click", function () {
-            cookieBanner.style.display = "none"; // Hide the banner
-            localStorage.setItem("cookieAccepted", "true"); // Store user's acceptance
-        });
+          // Handle the "Accept" button click
+          acceptCookieButton.addEventListener("click", function () {
+              cookieBanner.style.display = "none"; // Hide the banner
+              localStorage.setItem("cookieAccepted", "true"); // Store user's acceptance
+          });
 
-        // Handle the "Decline" button click
-        declineCookieButton.addEventListener("click", function () {
-            cookieBanner.style.display = "none"; // Hide the banner
-            localStorage.setItem("cookieDeclined", "true"); // Store user's decline
-        });
-    });
-
-</script>
+          // Handle the "Decline" button click
+          declineCookieButton.addEventListener("click", function () {
+              cookieBanner.style.display = "none"; // Hide the banner
+              localStorage.setItem("cookieDeclined", "true"); // Store user's decline
+          });
+      });
+  </script>
 </body>
 
 
+
+{% if page.url == "/" %} 
 <div class="rounded mb-5 hero">
   <div class="row align-items-center justify-content-between">
     <div class="col-md-6">
-      <h1 class="font-weight-bold mb-4 serif-font">Thanks for participating in our project!</h1>
-      <p class="lead mb-4">You can start here:</p>
-      <a href="{{site.baseurl}}/survey" class="btn btn-dark text-white px-5 btn-lg">Start the Survey</a>
+      <h1 class="font-weight-bold mb-4 serif-font">Thanks for participating in our survey!</h1>
+      <p class="lead mb-4">You can start soon:</p>
+      <a href="{{site.baseurl}}/survey" class="btn btn-dark text-white px-5 btn-lg">Start the experiment</a>
     </div>
     <div class="col-md-6 text-right pl-0 pl-lg-4">
       <img class="intro" height="500" src="{{site.baseurl}}/assets/images/intro.svg">      
