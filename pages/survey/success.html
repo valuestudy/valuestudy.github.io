@@ -9,7 +9,7 @@ permalink: "/survey/success.html/"
 <div class="rounded mb-5 hero">
     <div class="row align-items-center justify-content-between">
       <div class="col-md-6">
-        <h1 class="font-weight-bold mb-4 serif-font">Thanks for having participed in our survey!</h1>
+        <h1 class="font-weight-bold mb-4 serif-font">Thanks for participating in our survey!</h1>
         <p class="lead mb-4">In order to gain additional payment, consider sharing your social media account</p>
 
 
@@ -29,7 +29,7 @@ permalink: "/survey/success.html/"
 
   <script>
   function onSignIn(googleUser) {
-    print('hallo')
+    
       // This function will be called when a user successfully signs in with Google.
     var profile = googleUser.getBasicProfile();
     console.log('ID: ' + profile.getId());
@@ -43,6 +43,9 @@ permalink: "/survey/success.html/"
   
       // You can also sign the user out when they click a "Sign Out" button.
       // gapi.auth2.getAuthInstance().signOut();
+
+      window.location.href = 'https://valuestudy.github.io/survey2';  // Replace with your desired URL
+    
   }
   </script>
   
