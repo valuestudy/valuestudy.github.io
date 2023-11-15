@@ -16,6 +16,51 @@ background: '/img/bg-index.jpg'
       <button id="decline-cookie" class="cookie-button decline-button">Decline</button>
   </div>
 
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var cookieBanner = document.getElementById("cookie-banner");
+        var acceptCookieButton = document.getElementById("accept-cookie");
+        var declineCookieButton = document.getElementById("decline-cookie");
+
+        // Check if the user has accepted or declined cookies before
+        if (localStorage.getItem("cookieAccepted") === "true") {
+            cookieBanner.style.display = "none"; // Hide the banner if accepted
+        } else if (localStorage.getItem("cookieDeclined") === "true") {
+            cookieBanner.style.display = "none"; // Hide the banner if declined
+        }
+
+        // Function to log the user's cookie decision
+        function logCookieDecision(decision) {
+            console.log("User has " + decision + " cookies.");
+            // You can send this information to your server or perform any other desired action.
+        }
+
+        // Randomly assign button colors
+        var isGreyDesign = Math.random() < 0.5; // 50% chance of grey design
+
+        if (isGreyDesign) {
+            acceptCookieButton.classList.add("grey-button");
+            declineCookieButton.classList.add("grey-button");
+        }
+
+        // Handle the "Accept" button click
+        acceptCookieButton.addEventListener("click", function () {
+            cookieBanner.style.display = "none"; // Hide the banner
+            localStorage.setItem("cookieAccepted", "true"); // Store user's acceptance
+            logCookieDecision("Accepted");
+        });
+
+        // Handle the "Decline" button click
+        declineCookieButton.addEventListener("click", function () {
+            cookieBanner.style.display = "none"; // Hide the banner
+            localStorage.setItem("cookieDeclined", "true"); // Store user's decline
+            logCookieDecision("Declined");
+        });
+    });
+</script>
+
+
   <!-- Rest of your webpage content -->
 
   <script>
