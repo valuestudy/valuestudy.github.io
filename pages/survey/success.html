@@ -27,13 +27,15 @@ permalink: "/survey/success.html/"
 
 <script>
   function onSignIn(googleUser) {
-    window.location.href = 'https://valuestudy.github.io/survey2/';  // Replace with your desired URL
+    console.log('onSignIn function called');
+    console.log('Redirecting to /survey2/');
+    window.location.href = '/survey2/';  // Replace with your desired URL
 
   }
 </script>
   
   <!-- Include the Google Sign-In library -->
-  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <!-- <script src="https://apis.google.com/js/platform.js" async defer></script>-->
   
   </body>
   </html>
