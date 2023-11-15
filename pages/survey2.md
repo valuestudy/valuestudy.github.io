@@ -1,18 +1,17 @@
 ---
 layout: page
-title: Survey2
+title: Another Survey
 permalink: "/survey2/"
 ---
 
 
 <body>
      We ask you here another set of questions.
-    <form action="success.html" method="post" style="max-width: 400px; margin: 0 auto; text-align: left;">
+    <form action="success.html" method="post" style="max-width: 600px; margin: 0 auto; text-align: left;">
         <div style="margin: 10px 0;">
             <label for="age" style="display: block; margin-bottom: 5px;">Age:</label>
             <input type="text" name="age" id="age" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
         </div>
-
         <div style="margin: 10px 0;">
             <label for="privacy" style="display: block; margin-bottom: 5px;">privacy preference:</label>
             <select name="privacy" id="privacy" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
