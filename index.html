@@ -16,19 +16,12 @@ background: '/img/bg-index.jpg'
       <button id="decline-cookie" class="cookie-button decline-button">Decline</button>
   </div>
 
-
+<!-- Changing cookie banner script  -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
         var cookieBanner = document.getElementById("cookie-banner");
         var acceptCookieButton = document.getElementById("accept-cookie");
         var declineCookieButton = document.getElementById("decline-cookie");
-
-        // Check if the user has accepted or declined cookies before
-        if (localStorage.getItem("cookieAccepted") === "true") {
-            cookieBanner.style.display = "none"; // Hide the banner if accepted
-        } else if (localStorage.getItem("cookieDeclined") === "true") {
-            cookieBanner.style.display = "none"; // Hide the banner if declined
-        }
 
         // Function to log the user's cookie decision
         function logCookieDecision(decision) {
