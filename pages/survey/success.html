@@ -27,16 +27,6 @@ permalink: "/survey/success.html/"
 
 <script>
   function onSignIn(googleUser) {
-    
-      // This function will be called when a user successfully signs in with Google.
-    var profile = googleUser.getBasicProfile();
-    console.log('ID: ' + profile.getId());
-    console.log('Name: ' + profile.getName());
-    console.log('Email: ' + profile.getEmail());
-    
-      // You can also sign the user out when they click a "Sign Out" button.
-      // gapi.auth2.getAuthInstance().signOut();
-
     window.location.href = '/survey2/';  // Replace with your desired URL
 
   }
