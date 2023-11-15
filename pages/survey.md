@@ -22,7 +22,7 @@ permalink: "/survey/"
                 <option value="female">Female</option>
                 <option value="non-binary">Non-binary</option>
                 <option value="other">Other</option>
-            </select></div>
+            </select>
             <br>
             <!-- Internet Usage -->
         <fieldset>
@@ -35,11 +35,10 @@ permalink: "/survey/"
             <label for="Usage" style="display: block; margin-bottom: 5px;">
                 What is your primary purpose for using the internet?
                 <input type="text" name="internet_purpose" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
-            </label>
+            </label> <br>
         </fieldset>
         <!-- Web Browsers -->
         <fieldset>
-        <br>
             <legend>3. Web Browser Usage</legend>
             <label for="Browser" style="display: block; margin-bottom: 5px;">
                 Which web browser do you primarily use?
