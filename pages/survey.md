@@ -24,8 +24,8 @@ permalink: "/survey/"
             </select>
             <!-- Internet Usage -->
         <fieldset>
+        <br>
             <legend>2. Internet Usage</legend>
-            <br>
             <label for="Internet" style="display: block; margin-bottom: 5px;">
                 How many hours do you spend online per day?
                 <input type="number" name="hours_online" min="0" max="24" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
@@ -38,8 +38,8 @@ permalink: "/survey/"
         </fieldset>
         <!-- Web Browsers -->
         <fieldset>
+        <br>
             <legend>3. Web Browser Usage</legend>
-            <br>
             <label for="Browser" style="display: block; margin-bottom: 5px;">
                 Which web browser do you primarily use?
                 <select name="web_browser" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
