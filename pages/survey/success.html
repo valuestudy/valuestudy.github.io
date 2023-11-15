@@ -15,6 +15,8 @@ permalink: "/survey/success.html/"
           <!-- Add the Google Sign-In button <button class="g-signin2" data-onsuccess="onSignIn">Sign up with Google</button> --> 
         <script src="https://apis.google.com/js/platform.js" async defer></script>
 
+        
+
         <meta name="google-signin-client_id" content="1092513324979-i2efio0recer8vjfjsim86eva7pi7919.apps.googleusercontent.com">
 
         <div class="g-signin2" data-onsuccess="onSignIn"></div>
@@ -23,21 +25,22 @@ permalink: "/survey/success.html/"
     </div>
   </div>
 
+  <script>
+    // Define the onSignIn function in the global scope
+    function onSignIn(googleUser) {
+      console.log('onSignIn function called');
+      console.log('googleUser:', googleUser);
+  
+      // Check if there's additional information in googleUser
+      if (googleUser && googleUser.getAuthResponse) {
+        console.log('Auth response:', googleUser.getAuthResponse());
+      }
+  
+      // Redirect to the desired URL
+      window.location.href = '/survey2/';
+    }
+  </script>
 
-
-<script>
-  console.log('Google Sign-In successful');
-    
-    // Retrieve the user's profile information
-    var profile = googleUser.getBasicProfile();
-    console.log('ID: ' + profile.getId());
-    console.log('Name: ' + profile.getName());
-    console.log('Email: ' + profile.getEmail());
-
-    // Attempting to redirect
-    console.log('Attempting to redirect to survey2');
-    window.location.href = '/survey2/';
-</script>
   
   <!-- Include the Google Sign-In library -->
   <!-- <script src="https://apis.google.com/js/platform.js" async defer></script>-->
