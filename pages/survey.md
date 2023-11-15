@@ -7,7 +7,7 @@ permalink: "/survey/"
 
 <body>
      We kindly request that you answer the survey questions with honesty and candor. Your genuine responses are essential for the success and accuracy of our research. Your anonymity and privacy will be respected throughout the process.
-    <form action="success.html" method="post" style="max-width: 400px; margin: 0 auto; text-align: left;">
+    <form action="success.html" method="post" style="max-width: 500px; margin: 0 auto; text-align: left;">
         <!-- Generic information -->
         <fieldset> <legend>1. Demographics</legend>
         <div style="margin: 10px 0;">
@@ -22,7 +22,6 @@ permalink: "/survey/"
                 <option value="non-binary">Non-binary</option>
                 <option value="other">Other</option>
             </select>
-        </fieldset>
             <!-- Internet Usage -->
         <fieldset>
             <legend>2. Internet Usage</legend>
@@ -51,9 +50,7 @@ permalink: "/survey/"
             </label>
         </fieldset>
         </div>
-
         <!-- Add more form fields here -->
-
         <div style="text-align: center; margin-top: 20px;">
             <input type="submit" value="Submit" style="background-color: #007BFF; color: #fff; border: none; padding: 10px 20px; cursor: pointer; border-radius: 5px;">
         </div>
