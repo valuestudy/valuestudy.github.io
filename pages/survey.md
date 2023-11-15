@@ -8,6 +8,8 @@ permalink: "/survey/"
 <body>
      We kindly request that you answer the survey questions with honesty and candor. Your genuine responses are essential for the success and accuracy of our research. Your anonymity and privacy will be respected throughout the process.
     <form action="success.html" method="post" style="max-width: 400px; margin: 0 auto; text-align: left;">
+        <!-- Generic information -->
+        <fieldset> <legend>1. Demographics</legend>
         <div style="margin: 10px 0;">
             <label for="age" style="display: block; margin-bottom: 5px;">Age:</label>
             <input type="text" name="age" id="age" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
@@ -20,25 +22,26 @@ permalink: "/survey/"
                 <option value="non-binary">Non-binary</option>
                 <option value="other">Other</option>
             </select>
+        </fieldset>
             <!-- Internet Usage -->
         <fieldset>
             <legend>2. Internet Usage</legend>
-            <label>
+            <label for="Internet" style="display: block; margin-bottom: 5px;">
                 How many hours do you spend online per day?
-                <input type="number" name="hours_online" min="0" max="24">
+                <input type="number" name="hours_online" min="0" max="24" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
             </label>
             <br>
-            <label>
+            <label for="Usage" style="display: block; margin-bottom: 5px;">
                 What is your primary purpose for using the internet?
-                <input type="text" name="internet_purpose">
+                <input type="text" name="internet_purpose" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
             </label>
         </fieldset>
         <!-- Web Browsers -->
         <fieldset>
             <legend>3. Web Browser Usage</legend>
-            <label>
+            <label for="Browser" style="display: block; margin-bottom: 5px;">
                 Which web browser do you primarily use?
-                <select name="web_browser">
+                <select name="web_browser" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
                     <option value="brave">Brave</option>
                     <option value="chrome">Chrome</option>
                     <option value="firefox">Firefox</option>
