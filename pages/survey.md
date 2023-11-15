@@ -22,20 +22,14 @@ permalink: "/survey/"
                 <option value="female">Female</option>
                 <option value="non-binary">Non-binary</option>
                 <option value="other">Other</option>
-            </select>
-            <br>
+            </select> <br>
             <!-- Internet Usage -->
         <fieldset>
             <legend>2. Internet Usage</legend>
             <label for="Internet" style="display: block; margin-bottom: 5px;">
                 How many hours do you spend online per day?
                 <input type="number" name="hours_online" min="0" max="24" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
-            </label>
-            <br>
-            <label for="Usage" style="display: block; margin-bottom: 5px;">
-                What is your primary purpose for using the internet?
-                <input type="text" name="internet_purpose" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
-            </label> <br>
+            </label><br>
         </fieldset>
         <!-- Web Browsers -->
         <fieldset>
