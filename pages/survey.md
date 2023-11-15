@@ -7,6 +7,7 @@ permalink: "/survey/"
 
 <body style="text-align: justify;">
      We kindly request that you answer the survey questions with honesty and candor. Your genuine responses are essential for the success and accuracy of our research. Your anonymity and privacy will be respected throughout the process.
+    <br>
     <form action="success.html" method="post" style="max-width: 600px; margin: 0 auto; text-align: left;">
         <!-- Generic information -->
         <fieldset> <legend>1. Demographics</legend>
@@ -21,10 +22,10 @@ permalink: "/survey/"
                 <option value="female">Female</option>
                 <option value="non-binary">Non-binary</option>
                 <option value="other">Other</option>
-            </select>
+            </select></div>
+            <br>
             <!-- Internet Usage -->
         <fieldset>
-        <br>
             <legend>2. Internet Usage</legend>
             <label for="Internet" style="display: block; margin-bottom: 5px;">
                 How many hours do you spend online per day?
