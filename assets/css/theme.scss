@@ -633,6 +633,7 @@ span.navigation:before {
     border: none;
     padding: 5px 15px;
     cursor: pointer;
+    z-index: 1000; 
 }
 
 .accept-button {
