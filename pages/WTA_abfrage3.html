@@ -1,0 +1,340 @@
+{{ block title }}
+
+ {{ include 'cookiebanner/header.html'  }}
+
+  {{ endblock }}
+
+{{ block content }}
+
+
+    <style>
+      /* For the design of the Google button */
+
+      .gsi-material-button {
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        -webkit-appearance: none;
+        background-color: WHITE;
+        background-image: none;
+        border: 1px solid #747775;
+        -webkit-border-radius: 20px;
+        border-radius: 20px;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        color: #1f1f1f;
+        cursor: pointer;
+        font-family: 'Roboto', arial, sans-serif;
+        font-size: 14px;
+        height: 40px;
+        letter-spacing: 0.25px;
+        outline: none;
+        overflow: hidden;
+        padding: 0 12px;
+        position: relative;
+        text-align: center;
+        -webkit-transition: background-color .218s, border-color .218s, box-shadow .218s;
+        transition: background-color .218s, border-color .218s, box-shadow .218s;
+        vertical-align: middle;
+        white-space: nowrap;
+        width: auto;
+        max-width: 400px;
+        min-width: min-content;
+      }
+      .gsi-material-button .gsi-material-button-icon {
+        height: 20px;
+        margin-right: 12px;
+        min-width: 20px;
+        width: 20px;
+      }
+      .gsi-material-button .gsi-material-button-content-wrapper {
+        -webkit-align-items: center;
+        align-items: center;
+        display: flex;
+        -webkit-flex-direction: row;
+        flex-direction: row;
+        -webkit-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        height: 100%;
+        justify-content: space-between;
+        position: relative;
+        width: 100%;
+      }
+      .gsi-material-button .gsi-material-button-contents {
+        -webkit-flex-grow: 1;
+        flex-grow: 1;
+        font-family: 'Roboto', arial, sans-serif;
+        font-weight: 500;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        vertical-align: top;
+      }
+      .gsi-material-button .gsi-material-button-state {
+        -webkit-transition: opacity .218s;
+        transition: opacity .218s;
+        bottom: 0;
+        left: 0;
+        opacity: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      .gsi-material-button:disabled {
+        cursor: default;
+        background-color: #ffffff61;
+        border-color: #1f1f1f1f;
+      }
+      .gsi-material-button:disabled .gsi-material-button-contents {
+        opacity: 38%;
+      }
+      .gsi-material-button:disabled .gsi-material-button-icon {
+        opacity: 38%;
+      }
+      .gsi-material-button:not(:disabled):active .gsi-material-button-state,
+      .gsi-material-button:not(:disabled):focus .gsi-material-button-state {
+        background-color: #303030;
+        opacity: 12%;
+      }
+      .gsi-material-button:not(:disabled):hover {
+        -webkit-box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .30), 0 1px 3px 1px rgba(60, 64, 67, .15);
+        box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .30), 0 1px 3px 1px rgba(60, 64, 67, .15);
+      }
+      .gsi-material-button:not(:disabled):hover .gsi-material-button-state {
+        background-color: #303030;
+        opacity: 8%;
+      }
+
+
+
+
+        input[type="range"]::-webkit-slider-runnable-track {
+          background: linear-gradient(to right, #d3d3d3 0%, #d3d3d3 90%, #af4c4c, #af4c4c 100%);
+        }
+
+        /* Additional styling for Mozilla Firefox */
+        input[type="range"]::-moz-range-track {
+          background: linear-gradient(to right, #d3d3d3 0%, #d3d3d3 95%, #af4c4c 95%, #af4c4c 100%);
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+          /* Style for the slider thumb */
+          background-color: #af4c4c; /* Green color */
+        }
+
+        /* Additional styling for Mozilla Firefox */
+        input[type="range"]::-moz-range-thumb {
+          background-color: #af4c4c; /* Green color */
+        }
+
+
+          /* datalist beneath slider */
+        datalist {
+          display: flex;
+          justify-content: space-between;
+        }
+
+        option {
+          padding: 0;
+        }
+
+        input[type="range"] {
+          width: 200px;
+          margin: 0;
+        }
+    </style>
+
+<script>
+
+
+        firebase.auth()
+          .signInWithPopup(provider)
+          .then((result) => {
+            /** @type {firebase.auth.OAuthCredential} */
+            var credential = result.credential;
+
+            // This gives you a Google Access Token. You can use it to access the Google API.
+            var token = credential.accessToken;
+            // The signed-in user info.
+            var user = result.user;
+            // IdP data available in result.additionalUserInfo.profile.
+              // ...
+          }).catch((error) => {
+            // Handle Errors here.
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            // The email of the user's account used.
+            var email = error.email;
+            // The firebase.auth.AuthCredential type that was used.
+            var credential = error.credential;
+            // ...
+          });
+
+</script>
+
+
+  {% block scripts %}
+  <!-- Add Firebase SDK Scripts with defer attribute -->
+  <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-database-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/ui/6.1.0/firebase-ui-auth.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/6.1.0/firebase-ui-auth.css" />
+  {% endblock %}
+<!-- Firebase Configuration Script -->
+
+
+<div class="content">
+    <div class="content-table flex-column">
+              <br>
+
+
+            <h2>Angabe Ihrer Zahlungsbereitschaft </h2>
+            <br>
+            <br>
+           <p style="text-align: center; margin-top: 20px;">Ich wäre für einen Betrag von:
+
+            <br>
+
+                <input type="range" id="wtaExample" list="wta_values" min="0" max="2.10" step="0.01" value="1.5" style="width: 300px; text-align: center;" />
+
+                <datalist style="padding: 0" id="wta_values">
+                  <option value="0" label="0€">
+                  <option value="0.5" label=""></option>
+                  <option value="1" label="1€">
+                  <option value="1.5" label="">
+                  <option value="2" label="2 €">
+                </datalist>
+                <br>
+
+
+                <br>
+
+
+            <br>
+            <div class="chosen-price" id="chosenPrice" style="text-align: center;"> {{ chosen_price }} EUR bereit, mich mit meinem Google Konto ein zu loggen, bevor ich mit der Umfrage fortfahre.
+            </div>
+            <br>
+            <br>
+
+            <div style="margin-top: 10px;"><i>Zur Erinnerung: Das Forschungsteam enthält keinen Zugriff auf Informationen von Ihrem Google Konto und kann diese insbesondere nicht mit Ihren Antworten aus dem Fragebogen in Verbindung bringen.</i></p>
+            </i></div>
+            <div id="extraField" style="display: none;">
+
+              <br>
+
+            <br>
+          </div>
+
+                <button id="simulateButton" type="button" style="width: 200px; text-align: center; margin-top: 20px;">Bestätigen</button>
+                  <!-- Add this element to display the assigned price as text on the website -->
+                <div id="assignedPriceText" style="margin-top: 10px; align-items: center; "></div>
+                <div id="additionalText2" style="margin-top: 10px;"></div>
+                <div class="content-table flex-column">
+                
+                
+                  
+                  
+                  
+
+                  <div id="weiterButton"  style="display: none; text-align: center; margin-top: 10px;">
+                    {{ next_button }}</div>
+                <br>
+                
+              <!-- Google sign in Module , put here the link where page should redirect-->  
+            <div id="googleSignInContainer" style="display: none;  margin-top: 30px;">
+              
+                <script src="https://accounts.google.com/gsi/client" async></script>
+                <div id="g_id_onload"
+                    data-client_id="1092513324979-vg7tvd60ht6mc37nn3jpr2o2hud4ibqa.apps.googleusercontent.com"
+                    data-login_uri="/p/tjjvo17k/survey/Preferences/1"
+                    data-redirect_uri="localhost:8000/p/xuq6xu7b/WTA_abfrage/WTA_abfrage2/2"  
+                    data-auto_prompt="false">
+                </div>
+                <div class="g_id_signin"
+                    data-type="standard"
+                    data-size="large"
+                    data-theme="outline"
+                    data-text="sign_in_with"
+                    data-shape="rectangular"
+                    data-logo_alignment="left">
+                </div>
+              <body>
+                </div>
+              </button>
+                </p>
+            </div>
+
+  <script>
+    // Pass the Python variable to JavaScript
+
+    const slider = document.getElementById("wta");
+    const extraField = document.getElementById("extraField");
+
+      
+    let assignedPrice;
+    let experimentConducted = false;
+
+    // Disable the range and set its value to the one chosen on the page before
+
+    document.getElementById("wtaExample").disabled = true;
+    document.getElementById("wtaExample").value = js_vars.chosen_price;
+    document.getElementById("simulateButton").disabled = true;
+
+      document.addEventListener("DOMContentLoaded", function() {
+            simulateExperiment();
+        });
+
+      function simulateExperiment() {
+            // Check if the experiment has already been conducted
+            if (experimentConducted) {
+                alert("Experiment has already been conducted. You cannot redo it.");
+                return;
+            }
+            // Get the selected WTA value
+            const selectedWTA = js_vars.chosen_price;
+
+            // Simulate the random assignment of a price
+           
+            var assignedPrice = parseFloat("{{ assigned_price }}");
+            console.log("Assigned Price from Python:", assignedPrice);; // Random number between 0 and 2
+            // Show the assigned price on the webpage
+            document.getElementById("assignedPriceText").innerText = `Sie haben angegeben, gegen eine Zahlung von ${selectedWTA.toFixed(2)},- EUR bereit zu sein, sich mit Ihrem Google Account anzumelden. Vielen Dank für diese Angabe. Der Preis für die Anmeldung wurde zufällig bestimmt. Er beträgt ${assignedPrice.toFixed(2)} EUR.  `;
+            // Compare the random price with the selected WTA
+            if (assignedPrice > selectedWTA) {
+                // Display the Google Sign-In container
+                document.getElementById("googleSignInContainer").style.display = "block";
+                // Show the text for prices above WTA
+                document.getElementById("additionalText").innerText = `Der ausgeloste Preis liegt über der von Ihnen angegebenen Bereitschaft. Sie erhalten am Ende der Umfrage eine zusätzliche Zahlung von ${assignedPrice.toFixed(2)} EUR. Bitte melden Sie sich jetzt mit Ihrem Google Konto an:`;
+                // Hide other buttons
+                document.getElementById("weiterButton").style.display = "none";
+                
+            } else {
+                // Show the Weiter button for prices below or equal to WTA
+                document.getElementById("additionalText2").innerText = "Der ausgeloste Preis liegt unter der von Ihnen angegebenen Bereitschaft. Sie können jetzt mit der Umfrage fortfahren.";
+                // Hide the Google Sign-In container
+                document.getElementById("googleSignInContainer").style.display = "none";
+                
+                document.getElementById("weiterButton").style.display = "block";
+            }
+              // Set the flag to true after the experiment is conducted
+              experimentConducted = true;
+        }
+
+      function showAssignedPrice() {
+          if (assignedPrice === undefined) {
+              alert(`Please simulate the experiment first.`);
+          } else {
+              alert(`Assigned Price: ${assignedPrice.toFixed(2)} EUR`);
+          }
+      }
+
+      function continueToSurvey() {
+
+        console.log("Google Sign in Worked!");
+          // Redirect to the survey page (replace "survey.html" with the actual page URL)
+         // window.location.href = "survey_preferences.html";
+      }
+
+      </script>
+    
+    
+{% endblock %}
